@@ -1,0 +1,26 @@
++-------------------------------------------------+
+|                   SQLCHECK                      |
++-------------------------------------------------+
+> RISK LEVEL    :: ALL ANTI-PATTERNS
+> SQL FILE NAME :: ./exp/SF_Salaries.sql
+> COLOR MODE    :: DISABLED
+> VERBOSE MODE  :: DISABLED
+> DELIMITER     :: ;
+-------------------------------------------------
+==================== Results ===================
+
+-------------------------------------------------
+SQL Statement: create table salaries ( id integer primary key, employeename text, jobtitle
+text, basepay numeric, overtimepay numeric, otherpay numeric, benefits numeric,
+totalpay numeric, totalpaybenefits numeric, year integer, notes text, agency
+text, status text);
+[./exp/SF_Salaries.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+
+==================== Summary ===================
+All Anti-Patterns and Hints  :: 1
+>  High Risk   :: 1
+>  Medium Risk :: 0
+>  Low Risk    :: 0
+>  Hints       :: 0
