@@ -1,0 +1,11 @@
++-------------------------------------------------+
+|                   SQLCHECK                      |
++-------------------------------------------------+
+> RISK LEVEL    :: ALL ANTI-PATTERNS
+> SQL FILE NAME :: ./exp/Twitter-US-Airline-Sentiment.sql
+> COLOR MODE    :: DISABLED
+> VERBOSE MODE  :: DISABLED
+> DELIMITER     :: ;
+-------------------------------------------------
+==================== Results ===================
+No issues found.

@@ -1,0 +1,37 @@
++-------------------------------------------------+
+|                   SQLCHECK                      |
++-------------------------------------------------+
+> RISK LEVEL    :: ALL ANTI-PATTERNS
+> SQL FILE NAME :: ./exp/NIPS_Papers.sql
+> COLOR MODE    :: DISABLED
+> VERBOSE MODE  :: DISABLED
+> DELIMITER     :: ;
+-------------------------------------------------
+==================== Results ===================
+
+-------------------------------------------------
+SQL Statement: create table papers ( id integer primary key, year integer, title text,
+event_type text, pdf_name text, abstract text, paper_text text);
+[./exp/NIPS_Papers.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+
+-------------------------------------------------
+SQL Statement: create table authors ( id integer primary key, name text);
+[./exp/NIPS_Papers.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+
+-------------------------------------------------
+SQL Statement: create table paper_authors ( id integer primary key, paper_id integer, author_id
+integer);
+[./exp/NIPS_Papers.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+
+==================== Summary ===================
+All Anti-Patterns and Hints  :: 3
+>  High Risk   :: 3
+>  Medium Risk :: 0
+>  Low Risk    :: 0
+>  Hints       :: 0

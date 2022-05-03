@@ -1,0 +1,8 @@
+AP Report Summary
+==================== Summary ===================
+All Anti-Patterns and Hints  :: 0
+>  High Risk   :: 0
+>  Medium Risk :: 0
+>  Low Risk    :: 0
+>  Hints       :: 0
+

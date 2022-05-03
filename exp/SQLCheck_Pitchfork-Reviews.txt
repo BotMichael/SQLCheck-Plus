@@ -1,0 +1,26 @@
++-------------------------------------------------+
+|                   SQLCHECK                      |
++-------------------------------------------------+
+> RISK LEVEL    :: ALL ANTI-PATTERNS
+> SQL FILE NAME :: ./exp/Pitchfork-Reviews.sql
+> COLOR MODE    :: DISABLED
+> VERBOSE MODE  :: DISABLED
+> DELIMITER     :: ;
+-------------------------------------------------
+==================== Results ===================
+
+-------------------------------------------------
+SQL Statement: create table reviews ( reviewid integer, title text, artist text, url text,
+score real, best_new_music integer, author text, author_type text, pub_date
+text, pub_weekday integer, pub_day integer, pub_month integer, pub_year
+integer);
+[./exp/Pitchfork-Reviews.sql]: (MEDIUM RISK) (PHYSICAL_DATABASE_DESIGN ANTI-PATTERN) Imprecise Data Type
+[Matching Expression: real]
+
+
+==================== Summary ===================
+All Anti-Patterns and Hints  :: 1
+>  High Risk   :: 0
+>  Medium Risk :: 1
+>  Low Risk    :: 0
+>  Hints       :: 0

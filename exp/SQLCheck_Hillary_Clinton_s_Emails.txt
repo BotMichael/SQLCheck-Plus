@@ -1,0 +1,54 @@
++-------------------------------------------------+
+|                   SQLCHECK                      |
++-------------------------------------------------+
+> RISK LEVEL    :: ALL ANTI-PATTERNS
+> SQL FILE NAME :: ./exp/Hillary_Clinton_s_Emails.sql
+> COLOR MODE    :: DISABLED
+> VERBOSE MODE  :: DISABLED
+> DELIMITER     :: ;
+-------------------------------------------------
+==================== Results ===================
+
+-------------------------------------------------
+SQL Statement: create table emails ( id integer primary key, docnumber text, metadatasubject
+text, metadatato text, metadatafrom text, senderpersonid integer,
+metadatadatesent text, metadatadatereleased text, metadatapdflink text,
+metadatacasenumber text, metadatadocumentclass text, extractedsubject text,
+extractedto text, extractedfrom text, extractedcc text, extracteddatesent text,
+extractedcasenumber text, extracteddocnumber text, extracteddatereleased text,
+extractedreleaseinpartorfull text, extractedbodytext text, rawtext text);
+[./exp/Hillary_Clinton_s_Emails.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+[./exp/Hillary_Clinton_s_Emails.sql]: (MEDIUM RISK) (PHYSICAL_DATABASE_DESIGN ANTI-PATTERN) Values In Definition
+[Matching Expression: enum]
+
+[./exp/Hillary_Clinton_s_Emails.sql]: (LOW RISK) (QUERY ANTI-PATTERN) Spaghetti Query Alert
+[Matching Expression: ]
+
+
+-------------------------------------------------
+SQL Statement: create table persons ( id integer primary key, name text);
+[./exp/Hillary_Clinton_s_Emails.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+
+-------------------------------------------------
+SQL Statement: create table aliases ( id integer primary key, alias text, personid integer);
+[./exp/Hillary_Clinton_s_Emails.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+
+-------------------------------------------------
+SQL Statement: create table emailreceivers ( id integer primary key, emailid integer, personid
+integer);
+[./exp/Hillary_Clinton_s_Emails.sql]: (HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+
+==================== Summary ===================
+All Anti-Patterns and Hints  :: 6
+>  High Risk   :: 4
+>  Medium Risk :: 1
+>  Low Risk    :: 1
+>  Hints       :: 0

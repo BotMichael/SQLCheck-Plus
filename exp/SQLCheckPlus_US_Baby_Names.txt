@@ -1,0 +1,29 @@
+AP Report Summary
+-------------------------------------------------
+SQL Statement: create table nationalnames (
+    id integer primary key,
+    name text,
+    year integer,
+    gender text,
+    count integer)
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+-------------------------------------------------
+SQL Statement: create table statenames (
+    id integer primary key,
+    name text,
+    year integer,
+    gender text,
+    state text,
+    count integer);
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+==================== Summary ===================
+All Anti-Patterns and Hints  :: 2
+>  High Risk   :: 2
+>  Medium Risk :: 0
+>  Low Risk    :: 0
+>  Hints       :: 0
+

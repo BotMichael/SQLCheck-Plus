@@ -1,0 +1,66 @@
+AP Report Summary
+-------------------------------------------------
+SQL Statement: create table emails (
+    id integer primary key,
+    docnumber text,
+    metadatasubject text,
+    metadatato text,
+    metadatafrom text,
+    senderpersonid integer,
+    metadatadatesent text,
+    metadatadatereleased text,
+    metadatapdflink text,
+    metadatacasenumber text,
+    metadatadocumentclass text,
+    extractedsubject text,
+    extractedto text,
+    extractedfrom text,
+    extractedcc text,
+    extracteddatesent text,
+    extractedcasenumber text,
+    extracteddocnumber text,
+    extracteddatereleased text,
+    extractedreleaseinpartorfull text,
+    extractedbodytext text,
+    rawtext text)
+(HINT) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Multi-Valued Attribute
+[In MetadataFrom, ExtractedFrom column(s), values separated by ', ' has exceeded the threshold 0.15]
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) No Foreign Key
+[senderpersonid column(s) have been identified as potential foreign keys from other table but no referential integrity constraints have been established.]
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+-------------------------------------------------
+SQL Statement: create table persons (
+    id integer primary key,
+    name text)
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+-------------------------------------------------
+SQL Statement: create table aliases (
+    id integer primary key,
+    alias text,
+    personid integer)
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) No Foreign Key
+[personid column(s) have been identified as potential foreign keys from other table but no referential integrity constraints have been established.]
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+-------------------------------------------------
+SQL Statement: create table emailreceivers (
+    id integer primary key,
+    emailid integer,
+    personid integer);
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) No Foreign Key
+[emailid, personid column(s) have been identified as potential foreign keys from other table but no referential integrity constraints have been established.]
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+==================== Summary ===================
+All Anti-Patterns and Hints  :: 8
+>  High Risk   :: 7
+>  Medium Risk :: 0
+>  Low Risk    :: 0
+>  Hints       :: 1
+

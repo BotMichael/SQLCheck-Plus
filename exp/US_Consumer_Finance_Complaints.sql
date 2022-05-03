@@ -1,0 +1,20 @@
+CREATE TABLE consumer_complaints (
+date_received TEXT,
+  product TEXT,
+  sub_product TEXT,
+  issue TEXT,
+  sub_issue TEXT,
+  consumer_complaint_narrative TEXT,
+  company_public_response TEXT,
+  company TEXT,
+  state TEXT,
+  zipcode TEXT,
+  tags TEXT,
+  consumer_consent_provided TEXT,
+  submitted_via TEXT,
+  date_sent_to_company TEXT,
+  company_response_to_consumer TEXT,
+  timely_response TEXT,
+  consumer_disputed? TEXT,
+  complaint_id INTEGER
+);

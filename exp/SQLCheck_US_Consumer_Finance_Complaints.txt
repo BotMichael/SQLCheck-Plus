@@ -1,0 +1,11 @@
++-------------------------------------------------+
+|                   SQLCHECK                      |
++-------------------------------------------------+
+> RISK LEVEL    :: ALL ANTI-PATTERNS
+> SQL FILE NAME :: ./exp/US_Consumer_Finance_Complaints.sql
+> COLOR MODE    :: DISABLED
+> VERBOSE MODE  :: DISABLED
+> DELIMITER     :: ;
+-------------------------------------------------
+==================== Results ===================
+No issues found.

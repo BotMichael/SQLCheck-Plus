@@ -1,0 +1,41 @@
++-------------------------------------------------+
+|                   SQLCHECK                      |
++-------------------------------------------------+
+> RISK LEVEL    :: ALL ANTI-PATTERNS
+> SQL FILE NAME :: ./exp/mental_health.sql
+> COLOR MODE    :: DISABLED
+> VERBOSE MODE  :: DISABLED
+> DELIMITER     :: ;
+-------------------------------------------------
+==================== Results ===================
+
+-------------------------------------------------
+SQL Statement: create table answer ( answertext varchar(10000) null, surveyid integer null,
+userid integer null, questionid integer null );
+[./exp/mental_health.sql]: (HINTS) (QUERY ANTI-PATTERN) NULL Usage
+[Matching Expression: null]
+
+
+-------------------------------------------------
+SQL Statement: create table question ( questiontext varchar(1000) null, questionid integer null
+);
+[./exp/mental_health.sql]: (HINTS) (QUERY ANTI-PATTERN) NULL Usage
+[Matching Expression: null]
+
+
+-------------------------------------------------
+SQL Statement: create table survey ( surveyid integer not null, description varchar(255) null,
+primary key (surveyid) );
+[./exp/mental_health.sql]: (HINTS) (QUERY ANTI-PATTERN) NULL Usage
+[Matching Expression: null]
+
+[./exp/mental_health.sql]: (HINTS) (QUERY ANTI-PATTERN) NOT NULL Usage
+[Matching Expression: not null]
+
+
+==================== Summary ===================
+All Anti-Patterns and Hints  :: 4
+>  High Risk   :: 0
+>  Medium Risk :: 0
+>  Low Risk    :: 0
+>  Hints       :: 4

@@ -1,0 +1,28 @@
+AP Report Summary
+-------------------------------------------------
+SQL Statement: create table answer (
+	answertext varchar(10000) null,
+	surveyid integer null,
+	userid integer null,
+	questionid integer null
+)
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) No Primary Key
+[No Primary key has been defined in the table]
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) No Foreign Key
+[surveyid, userid, questionid column(s) have been identified as potential foreign keys from other table but no referential integrity constraints have been established.]
+
+-------------------------------------------------
+SQL Statement: create table question (
+	questiontext varchar(1000) null,
+	questionid integer null
+)
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) No Primary Key
+[No Primary key has been defined in the table]
+
+==================== Summary ===================
+All Anti-Patterns and Hints  :: 3
+>  High Risk   :: 3
+>  Medium Risk :: 0
+>  Low Risk    :: 0
+>  Hints       :: 0
+

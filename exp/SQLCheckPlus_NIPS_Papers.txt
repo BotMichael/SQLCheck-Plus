@@ -1,0 +1,37 @@
+AP Report Summary
+-------------------------------------------------
+SQL Statement: create table papers (
+    id integer primary key,
+    year integer,
+    title text,
+    event_type text,
+    pdf_name text,
+    abstract text,
+    paper_text text)
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+-------------------------------------------------
+SQL Statement: create table authors (
+    id integer primary key,
+    name text)
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+-------------------------------------------------
+SQL Statement: create table paper_authors (
+    id integer primary key,
+    paper_id integer,
+    author_id integer);
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) No Foreign Key
+[paper_id, author_id column(s) have been identified as potential foreign keys from other table but no referential integrity constraints have been established.]
+(HIGH RISK) (LOGICAL_DATABASE_DESIGN ANTI-PATTERN) Generic Primary Key
+[Matching Expression:  id ]
+
+==================== Summary ===================
+All Anti-Patterns and Hints  :: 4
+>  High Risk   :: 4
+>  Medium Risk :: 0
+>  Low Risk    :: 0
+>  Hints       :: 0
+
