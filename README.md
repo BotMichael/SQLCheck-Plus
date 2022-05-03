@@ -42,17 +42,27 @@ https://www.kaggle.com/datasets/seanlahman/the-history-of-baseball
 
 ------------------------ Reproduce Work:
 download a SQLite file and put in exp folder,
+
 in terminal enter: python3 main.py ./exp/<filename>.sqlite <optional threshold>
 
 Final Paper code: (all using default threshold 0.15 while PitchforkReviews uses 0.001)
 
+
 python3 main.py ./exp/Hillary_Clinton_s_Emails.sqlite
+
 python3 main.py ./exp/mental_health.sqlite
+
 python3 main.py ./exp/NIPS_Papers.sqlite
+
 python3 main.py ./exp/Pitchfork-Reviews.sqlite 0.001
+
 python3 main.py ./exp/SF_Salaries.sqlite
+
 python3 main.py ./exp/Twitter-US-Airline-Sentiment.sqlite
+
 python3 main.py ./exp/US_Baby_Names.sqlite
+
 python3 main.py ./exp/US_Consumer_Finance_Complaints.sqlite
+
 python3 main.py ./exp/The-History-of-Baseball.sqlite
 
